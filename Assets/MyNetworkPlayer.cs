@@ -29,7 +29,11 @@ public class MyNetworkPlayer : NetworkBehaviour
     {
         displayColor = newDisplayColor;
     }
-
+    private Vector3 GetRandomSpawnPosition()
+    {
+        // 返回一个新的随机生成位置，你需要根据你的场景和需求来实现这个方法
+        return new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
+    }
     [Command]
     private void CmdSetDisplayName(string newDisplayName)
     {
@@ -72,11 +76,14 @@ public class MyNetworkPlayer : NetworkBehaviour
 
         if (collision.gameObject.CompareTag("AI"))
         {
-            NetworkServer.Destroy(collision.gameObject);
+            NetworkServer.Destroy(collision.
+                gameObject);
 
             RpcGameOver("AI has been defeated!");
+           
         }
     }
+   
 
     [ClientRpc]
     private void RpcGameOver(string message)
