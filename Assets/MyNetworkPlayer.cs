@@ -8,7 +8,7 @@ public class MyNetworkPlayer : NetworkBehaviour
 {
     [SerializeField] private TMP_Text displayNameText = null;
     [SerializeField] private Renderer displayColorRenderer = null;
-
+    [SerializeField] private TMP_Text gameOverText = null;
     [SyncVar(hook = nameof(HandleDisplayNameUpdate))]
     [SerializeField]
     private string displayName = "Missing Name";
@@ -66,5 +66,24 @@ public class MyNetworkPlayer : NetworkBehaviour
     {
         Debug.Log(newDisplayName);
     }
+    [ServerCallback]
+    private void OnTriggerEnter(Collider collision)
+    {
+
+        if (collision.gameObject.CompareTag("AI"))
+        {
+            NetworkServer.Destroy(collision.gameObject);
+
+            RpcGameOver("AI has been defeated!");
+        }
+    }
+
+    [ClientRpc]
+    private void RpcGameOver(string message)
+    {
+        Debug.Log(message);
+
+    }
+
     #endregion
 }

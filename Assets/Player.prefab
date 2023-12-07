@@ -97,11 +97,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3627445164384426738}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0794928, y: 1.0521955, z: 1.2140143}
+  m_Center: {x: -0.006067276, y: 0.026097894, z: 0.02808845}
 --- !u!114 &881283869080303369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +185,7 @@ MonoBehaviour:
   syncInterval: 0
   displayNameText: {fileID: 8545525250824870622, guid: c65765e93d0b64747a94e0b40aeaa5fa, type: 3}
   displayColorRenderer: {fileID: 499126912293462341}
+  gameOverText: {fileID: 8545525250824870622, guid: c65765e93d0b64747a94e0b40aeaa5fa, type: 3}
   displayName: Player1
   displayColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!54 &8551252578672755052
@@ -198,7 +199,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0

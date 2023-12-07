@@ -45,14 +45,6 @@ public class Ai : NetworkBehaviour
         return direction;
     }
 
-    [ServerCallback]
-    private void OnCollisionEnter(Collision collision)
-    {
-      
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            NetworkServer.Destroy(gameObject);
-            Debug.Log("yes");
-        }
-    }
+   
+
 }
