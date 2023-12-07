@@ -777,6 +777,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 195143665
       objectReference: {fileID: 0}
+    - target: {fileID: 4367160143336918790, guid: 83cbc0f283e4553418db678037b56521, type: 3}
+      propertyPath: serverOnly
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7946353100589249259, guid: 83cbc0f283e4553418db678037b56521, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -831,6 +835,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 737121007c45641d8ac681913d09bdfe, type: 2}
     - target: {fileID: 7946353100589249263, guid: 83cbc0f283e4553418db678037b56521, type: 3}
       propertyPath: m_Name
+      value: AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946353100589249263, guid: 83cbc0f283e4553418db678037b56521, type: 3}
+      propertyPath: m_TagString
       value: AI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
