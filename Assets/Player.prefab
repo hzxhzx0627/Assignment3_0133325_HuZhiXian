@@ -177,17 +177,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3627445164384426738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7aee018a63f4e43b8661656d2feed3, type: 3}
+  m_Script: {fileID: 11500000, guid: d3545156646b8dd4493d7c78ef48eaab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 1
+  syncDirection: 0
   syncMode: 0
   syncInterval: 0
   displayNameText: {fileID: 8545525250824870622, guid: c65765e93d0b64747a94e0b40aeaa5fa, type: 3}
   displayColorRenderer: {fileID: 499126912293462341}
-  gameOverText: {fileID: 8545525250824870622, guid: c65765e93d0b64747a94e0b40aeaa5fa, type: 3}
-  displayName: Player1
-  displayColor: {r: 0, g: 0, b: 0, a: 1}
+  displayName: H
+  displayColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!54 &8551252578672755052
 Rigidbody:
   m_ObjectHideFlags: 0

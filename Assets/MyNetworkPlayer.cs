@@ -8,7 +8,7 @@ public class MyNetworkPlayer : NetworkBehaviour
 {
     [SerializeField] private TMP_Text displayNameText = null;
     [SerializeField] private Renderer displayColorRenderer = null;
-    [SerializeField] private TMP_Text gameOverText = null;
+
     [SyncVar(hook = nameof(HandleDisplayNameUpdate))]
     [SerializeField]
     private string displayName = "Missing Name";
@@ -29,11 +29,7 @@ public class MyNetworkPlayer : NetworkBehaviour
     {
         displayColor = newDisplayColor;
     }
-    private Vector3 GetRandomSpawnPosition()
-    {
-        // 返回一个新的随机生成位置，你需要根据你的场景和需求来实现这个方法
-        return new Vector3(Random.Range(-10f, 10f), 0f, Random.Range(-10f, 10f));
-    }
+
     [Command]
     private void CmdSetDisplayName(string newDisplayName)
     {
@@ -70,27 +66,5 @@ public class MyNetworkPlayer : NetworkBehaviour
     {
         Debug.Log(newDisplayName);
     }
-    [ServerCallback]
-    private void OnTriggerEnter(Collider collision)
-    {
-
-        if (collision.gameObject.CompareTag("AI"))
-        {
-            NetworkServer.Destroy(collision.
-                gameObject);
-
-            RpcGameOver("AI has been defeated!");
-           
-        }
-    }
-   
-
-    [ClientRpc]
-    private void RpcGameOver(string message)
-    {
-        Debug.Log(message);
-
-    }
-
     #endregion
 }
